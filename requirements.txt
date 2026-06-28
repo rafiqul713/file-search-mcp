@@ -1,0 +1,48 @@
+# =============================================================================
+# requirements.txt — Python dependencies for file-search-mcp
+# =============================================================================
+#
+# Install everything with:
+#   pip install --timeout 120 -r requirements.txt
+#
+# What each package does:
+# -----------------------------------------------------------------------
+# mcp[cli]                 — Official Anthropic MCP Python SDK.
+#                            [cli] extra installs the 'mcp' command-line tool
+#                            for testing servers during development.
+#
+# langchain                — Core LangChain framework: chains, documents,
+#                            text splitters, base classes.
+#
+# langchain-community      — Community integrations for LangChain:
+#                            HuggingFaceEmbeddings, Chroma, TextLoader,
+#                            PyPDFLoader, and many more.
+#
+# langchain-google-genai   — LangChain integration for Google Gemini.
+#                            Used in server.py's summarise_topic tool.
+#
+# chromadb                 — Local vector database. Stores embeddings and
+#                            original text on disk in ./chroma_db/
+#
+# sentence-transformers    — HuggingFace library that runs the embedding model
+#                            (all-MiniLM-L6-v2) locally. No API key needed.
+#
+# watchdog                 — File system watcher. Detects when files in data/
+#                            are created or modified and triggers re-indexing.
+#
+# python-dotenv            — Reads .env files into os.environ so we can keep
+#                            API keys out of source code.
+#
+# pypdf                    — PDF text extraction library used by PyPDFLoader.
+#                            Required to index .pdf files.
+# =============================================================================
+
+mcp[cli]>=1.0.0
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-google-genai>=2.0.0
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+watchdog>=4.0.0
+python-dotenv>=1.0.0
+pypdf>=4.0.0
